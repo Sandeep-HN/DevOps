@@ -6,7 +6,7 @@ pipeline{
       echo "Checking out from Git"
     }
     }
-    stage("Deploy"){
+    stage("Deploy-dev"){
       when{
         branch 'develop'
       }
@@ -14,7 +14,7 @@ pipeline{
       echo "Deployed to dev server"
     }
     }
-     stage("Deploy"){
+     stage("Deploy-prod"){
       when{
         branch 'main'
       }
